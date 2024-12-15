@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s ease-in-out;
+    user-select: none;
+}
+
+body {
+    background-color: #1A1A2E;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#start-screen {
+    text-align: center;
+}
+
+#start-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#start-game {
+    background-color: #0F3460;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#start-game:hover {
+    background-color: #E94560;
+    color: black;
+}
+
+#game-container {
+    text-align: center;
+}
+
+.turn-container {
+    width: 200px;
+    height: 90px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn-container h3 {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.turn-container .turn-box {
+    border: 2px solid #16213E;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.turn-container .turn-box:nth-child(even) {
+    border-right: none;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 45px;
+    background-color: #E94560;
+    z-index: -1;
+    transition: left 0.3s ease-in-out;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+    margin: 30px auto;
+    border: 2px solid #16213E;
+    gap: 5px;
+}
+
+.box {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #16213E;
+    background-color: #0F3460;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.box:hover {
+    background-color: #E94560;
+    transform: scale(1.1);
+}
+
+.win {
+    background-color: #00F0FF !important;
+    animation: glow 1s infinite alternate;
+}
+
+
+
+#play-again {
+    background-color: #E94560;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px;
+}
+
+#play-again:hover {
+    background-color: #00F0FF;
+    color: black;
+}
